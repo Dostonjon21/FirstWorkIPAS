@@ -16,3 +16,8 @@ body{
     align-items: center;
     justify-content: center;
 }
+.container{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
