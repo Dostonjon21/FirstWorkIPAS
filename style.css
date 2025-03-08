@@ -5,5 +5,12 @@
 }
 html{
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui;
+    color: #555;
+    background-color: #f7f7f7;
+    min-height: 100vh;
     
 }
