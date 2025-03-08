@@ -21,3 +21,23 @@ body{
     flex-flow: column;
     align-items: center;
 }
+.countries{
+    margin-top: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    row-gap: 4rem;
+    font-size: 2rem;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.country{
+    background-color: #fff;
+    box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+    font-size: 1.8rem;
+    width: 30rem;
+    border-radius: 0.7rem;
+    margin: 0.3rem;
+    /* overflow: hidden; */
+}
