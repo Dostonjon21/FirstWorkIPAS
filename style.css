@@ -20,6 +20,7 @@ body{
     display: flex;
     flex-flow: column;
     align-items: center;
+    width: 400px;
 }
 .countries{
     margin-top: 8rem;
