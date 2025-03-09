@@ -23,5 +23,5 @@ const html = `
     countriesContainer.insertAdjacentHTML('beforeend', html)
      countriesContainer.style.opacity = 1
 })
-}
-getCountryData('germany');
+};
+getCountryData('France');
