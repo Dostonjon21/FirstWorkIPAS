@@ -41,3 +41,65 @@ body{
     margin: 0.3rem;
     /* overflow: hidden; */
 }
+.neighbour::before{
+    content: 'Neighbour country';
+    width: 100%;
+    position: absolute;
+    top: -4rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #888;
+}
+.neighbour{
+    transform: scale(0.8) translateY(1rem);
+    margin-left: 0;
+}
+.country-img{
+    width: 30rem;
+    height: 17rem;
+    object-fit: cover;
+    background-color: #eee;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+}
+.country-data{
+    padding: 2.5rem 3.75rem 3rem 3.75rem;
+}
+.country-name{
+    font-size: 2.7rem;
+    margin-bottom: 0.7rem;
+}
+.country-region{
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+    color: #888;
+}
+.country-row:not(:last-child){
+    margin-bottom: 1rem;
+}
+.btn-country{
+    border: none;
+    font-size: 2rem;
+    padding: 2rem 5rem;
+    border-radius: 0.7rem;
+    color: white;
+    background-color: orangered;
+    cursor: pointer;
+}
+.images{
+    display: flex;
+}
+.images img{
+    display: block;
+    width: 80rem;
+    margin: 4rem;
+}
+.images img.parallel{
+    width: 40rem;
+    margin: 2rem;
+    border: 3rem solid white;
+    box-shadow: 0 2rem 5rem 1rem rgba(0, 0, 0, 0.1);
+}
