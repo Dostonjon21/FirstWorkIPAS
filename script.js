@@ -25,5 +25,5 @@ const getCountryData = function (country) {
         countriesContainer.style.opacity = 1;
     });
 };
-getCountryData('France');
+getCountryData('Qatar');
 getCountryData('Uzbekistan');
