@@ -15,8 +15,8 @@ const html = `
                     <h3 class="country-name">${info.name.common}</h3>
                     <h4 class="country-region">${info.region}</h4>
                      <p class="country-row"><span>👨‍👩‍👦</span>${(info.population / 1000000).toFixed}</p>
-                     <p class="country-row"><span>🗣</span>lANG</p>
-                     <p class="country-row"><span>💸</span>CUR</p>
+                     <p class="country-row"><span>Capital:</span>${info.capital[0]}</p>
+                     <p class="country-row"><span>Borders:</span>${info.borders}</p>
                 </div>
               </article>
     `
