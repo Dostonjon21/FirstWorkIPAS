@@ -20,5 +20,6 @@ const html = `
                 </div>
               </article>
     `
-    countriesContainer.insertAdjacentHTML('beforeend')
+    countriesContainer.insertAdjacentHTML('beforeend', html)
+    
 });
