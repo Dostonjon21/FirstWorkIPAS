@@ -21,5 +21,5 @@ const html = `
               </article>
     `
     countriesContainer.insertAdjacentHTML('beforeend', html);
-    countriesContainer.style.opacity = 1
+ 
 });
