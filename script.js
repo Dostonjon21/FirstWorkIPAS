@@ -10,7 +10,7 @@ const [info] = JSON.parse(request.responseText);
 console.log(info);
 const html = `
         <article class="country">
-                <img src="" class="country-img">
+                <img src="${info.flags.png}" class="country-img">
                 <div class="country-data">
                     <h3 class="country-name">Country</h3>
                     <h4 class="country-region">Region</h4>
