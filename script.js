@@ -1,9 +1,9 @@
 'use strict';
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
-
+const getCountryData = function(country) {
 const request = new XMLHttpRequest();
-request.open('GET', 'https://restcountries.com/v3.1/name/uzbekistan');
+request.open('GET', 'https://restcountries.com/v3.1/name/${country}');
 request.send();
 request.addEventListener("load", () => {
 const [info] = JSON.parse(request.responseText); 
@@ -22,4 +22,5 @@ const html = `
     `
     countriesContainer.insertAdjacentHTML('beforeend', html)
      countriesContainer.style.opacity = 1
-});
+})};
+getCountryData('germany');
