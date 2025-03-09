@@ -20,6 +20,6 @@ const html = `
                 </div>
               </article>
     `
-    countriesContainer.insertAdjacentHTML('beforeend', html);
- 
+    countriesContainer.insertAdjacentHTML('beforeend', html)
+     countriesContainer.style.opacity = 1
 });
