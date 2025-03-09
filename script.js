@@ -8,7 +8,6 @@ request.send();
 request.addEventListener("load", () => {
 const [info] = JSON.parse(request.responseText); 
 console.log(info);
-
 const html = `
         <article class="country">
                 <img src="" class="country-img">
