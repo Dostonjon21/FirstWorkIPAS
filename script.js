@@ -13,7 +13,7 @@ const html = `
                 <img src="${info.flags.png}" class="country-img">
                 <div class="country-data">
                     <h3 class="country-name">${info.name.common}</h3>
-                    <h4 class="country-region">Region</h4>
+                    <h4 class="country-region">${info.region}</h4>
                      <p class="country-row"><span>👨‍👩‍👦</span>POP people</p>
                      <p class="country-row"><span>🗣</span>lANG</p>
                      <p class="country-row"><span>💸</span>CUR</p>
