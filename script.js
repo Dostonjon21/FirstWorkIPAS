@@ -5,20 +5,18 @@ const countriesContainer = document.querySelector('.countries');
 const request = new XMLHttpRequest();
 request.open('GET', 'https://restcountries.com/v3.1/name/uzbekistan');
 request.send();
-
 request.addEventListener("load", () => {
-    const [info] = JSON.parse(request.responseText); 
-
-    const html = `
-      <article class="country">
-        <img src="${info.flags.png}" class="country-img" />
-        <div class="country-data">
-            <h3 class="country-name">${info.name.common}</h3>
-            <h4 class="country-region">${info.region}</h4>
-            <p class="country-row"><span>👨‍👩‍👦</span>${(info.population / 1_000_000).toFixed(1)} million people</p>
-            <p class="country-row"><span>🗣</span>${Object.values(info.languages).join(', ')}</p>
-            <p class="country-row"><span>💸</span>${Object.values(info.currencies)[0].name} (${Object.keys(info.currencies)[0]})</p>
-        </div>
-      </article>
+const [info] = JSON.parse(request.responseText); 
+const html = `
+        <article class="country">
+                <img src="" class="country-img">
+                <div class="country-data">
+                    <h3 class="country-name">Country</h3>
+                    <h4 class="country-region">Region</h4>
+                     <p class="country-row"><span>👨‍👩‍👦</span>POP people</p>
+                     <p class="country-row"><span>🗣</span>lANG</p>
+                     <p class="country-row"><span>💸</span>CUR</p>
+                </div>
+              </article>
     `
 });
