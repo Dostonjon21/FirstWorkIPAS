@@ -78,7 +78,7 @@ body{
     color: #888;
 }
 .country-row:not(:last-child){
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem 
 }
 .btn-country{
     border: none;
