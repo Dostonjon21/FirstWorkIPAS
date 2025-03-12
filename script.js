@@ -1,8 +1,9 @@
 'use strict';
+
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
-const renderCountry = function(info){
 
+const renderCountry = function (info) {
     const borders = info.borders ? info.borders.join(', ') : 'No borders';
     const html = `
         <article class="country">
@@ -18,30 +19,34 @@ const renderCountry = function(info){
     `;
     countriesContainer.insertAdjacentHTML('beforeend', html);
     countriesContainer.style.opacity = 1;
-}
+};
 
-
-
-const getCountryData = function (country) {
-    const request = new XMLHttpRequest();
-    request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
-    request.send();+
-    0 
-    request.addEventListener("load", () => {
-        const [info] = JSON.parse(request.responseText);
-     const [neighbour] = info.borders
-
-
+const getCountryData = async function (country) {
+    try {
+        const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+        const [info] = await res.json();
         renderCountry(info);
-        const request2 = new XMLHttpRequest();
-        request2.open('GET', 'https://restcountries.com/v3.1/alpha/${neighbour}');
-        request2.send();
-        request2.addEventListener("load", () => {
-            const [neighbourInfo]= JSON.parse(request2.responseText)
-            renderCountry(neighbourInfo)    
-            
-        })
-    });
+
+        if (!info.borders) return;
+
+        const firstNeighbour = info.borders[0];
+        if (!firstNeighbour) return;
+
+        const res2 = await fetch(`https://restcountries.com/v3.1/alpha/${firstNeighbour}`);
+        const [neighbourInfo] = await res2.json();
+        renderCountry(neighbourInfo);
+
+        if (!neighbourInfo.borders) return;
+
+        const secondNeighbour = neighbourInfo.borders[0];
+        if (!secondNeighbour) return;
+
+        const res3 = await fetch(`https://restcountries.com/v3.1/alpha/${secondNeighbour}`);
+        const [secondNeighbourInfo] = await res3.json();
+        renderCountry(secondNeighbourInfo);
+    } catch (err) {
+        console.error(err);
+    }
 };
 
 getCountryData('Uzbekistan');
